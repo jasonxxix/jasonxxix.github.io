@@ -26,36 +26,6 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.card_container {
-  height: 600px;
-  width: 300px;
-  background-color: #c2c2d6;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 25px;
-  margin: 20px;
-  transition: transform 1s;
-}
-
-.card_container > img {
-  border-radius: 100%;
-  border-color: #d1d1e0;
-  border-width: 2px;
-  margin-bottom: 10px;
-}
-
-.card_container > b {
-  font-size: 42px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: azure;
-}
-
-.card_container:hover {
-  transform: rotateY(360deg);
-  cursor: pointer;
-}
 
 main {
   background-color: #fff7e6;
