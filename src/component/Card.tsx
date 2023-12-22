@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "../component/Image"
 
 interface CardType {
   src: string;
