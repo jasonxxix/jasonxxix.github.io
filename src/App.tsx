@@ -15,12 +15,12 @@ function App() {
     position: "Full Stack Developer",
     src: "./images/person.jpg",
   }
-  const StyleModes: string[] = ["Dark Mode", "Bright Mode"];
+  
 
   return (
     <>
-      <Header tabs={tabs} user={user} styleMode={StyleModes[0]} />
-      <div className="App"></div>
+      <Header tabs={tabs} user={user} />
+      <div className="App bg-amber-50 dark:bg-cyan-900"></div>
     </>
   );
 }

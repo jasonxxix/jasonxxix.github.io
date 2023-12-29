@@ -1,12 +1,9 @@
 
 
 .App {
-  --main-bg-color: #fff7e6;
-
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: var(--main-bg-color);
 }
