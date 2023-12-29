@@ -1,17 +1,26 @@
 import React from 'react';
-import Card from './components/Card'
 import './App.css';
-import { Toaster } from './components/ui/toaster';
-import { ToastDemo } from './components/ToastDemo';
+import Header from './components/Header';
+
+export interface User {
+  name: string;
+  position: string;
+  src: string;
+} 
 
 function App() {
+  const Tabs: string[] = ["About Me", "Skills", "Projects"];
+  const User: User = {
+    name: "Jason Raymond Reyes",
+    position: "Full Stack Developer",
+    src: "./images/person.jpg",
+  } 
+
   return (
-    <div className="App">
-      <Card src="/images/person.jpg" alt="Person" textarea={"About"} />
-      <Card src="/images/projects.jpg" alt="QuestionMark" textarea={"Projects"} />
-      <ToastDemo />
-      <Toaster />
-    </div>
+    <>
+      <Header Tabs={Tabs} User={User} />
+      <div className="App"></div>
+    </>
   );
 }
 
