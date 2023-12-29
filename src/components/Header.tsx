@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Separator } from "./ui/separator"
+import { Switch } from "./ui/switch";
 import { User } from "../App";
 import { generateAlt } from "../utils/images";
 
@@ -10,19 +11,22 @@ function generateItem (text: string) {
     </>)
 }
 
-export default function Header(props: { Tabs: string[], User: User }) {
-    const { Tabs, User } = props;
+export default function Header(props: { tabs: string[], user: User, styleMode: string }) {
+    const { tabs, user, styleMode } = props;
     return (
         <header className="border-slate-200 border-b p-3 flex justify-between">
             <div className="flex shrink space-x-2">
                 <div>Portfolio: </div>
-                <Avatar src={User.src} alt={generateAlt(User.name, "avatar")} className="max-h-6"/>
-                <div>{User.name}</div>
+                <Avatar src={user.src} alt={generateAlt(user.name, "avatar")} className="max-h-6"/>
+                <div>{user.name}</div>
                 <Separator orientation="vertical" />
-                <div>{User.position}</div>
+                <div>{user.position}</div>
             </div>
             <div className="flex h-5 items-center space-x-4 justify-end">
-                {Tabs.map((text)=> (generateItem(text)))}
+                {tabs.map((text)=> (generateItem(text)))}
+                <Separator orientation="vertical" />
+                <Switch />
+                <div>{styleMode}</div>
             </div>
         </header>
     )

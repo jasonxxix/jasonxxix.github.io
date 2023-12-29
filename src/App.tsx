@@ -9,16 +9,17 @@ export interface User {
 } 
 
 function App() {
-  const Tabs: string[] = ["About Me", "Skills", "Projects"];
-  const User: User = {
+  const tabs: string[] = ["About Me", "Skills", "Projects"];
+  const user: User = {
     name: "Jason Raymond Reyes",
     position: "Full Stack Developer",
     src: "./images/person.jpg",
-  } 
+  }
+  const StyleModes: string[] = ["Dark Mode", "Bright Mode"];
 
   return (
     <>
-      <Header Tabs={Tabs} User={User} />
+      <Header tabs={tabs} user={user} styleMode={StyleModes[0]} />
       <div className="App"></div>
     </>
   );
