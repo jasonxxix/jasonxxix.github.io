@@ -49,7 +49,9 @@ export default function Navbar(props: { tabs: string[], user: User }) {
                         onClick={burgerHide}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
-                    
+                    <Switch 
+                        onCheckedChange={toggleDarkMode}
+                    />
                 </div>
                 <div className="hidden md:hidden" id="mobile-menu">
                     <div className="space-y-1 px-2 pb-3 pt-2">
