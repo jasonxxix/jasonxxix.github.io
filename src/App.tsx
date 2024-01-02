@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import AboutMe from './components/AboutMe';
+import Skills from './components/Skills';
 
 export interface User {
   name: string;
@@ -23,6 +24,7 @@ function App() {
       <Navbar tabs={tabs} user={user} />
       <div className="App bg-amber-50 dark:bg-cyan-900">
         <AboutMe />
+        <Skills />
       </div>
     </>
   );
