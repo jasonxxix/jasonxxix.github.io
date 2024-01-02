@@ -29,11 +29,11 @@ const burgerHide = () => {
     mobileMenu?.classList.replace("block", "hidden");
 }
 
-export default function Header(props: { tabs: string[], user: User }) {
+export default function Navbar(props: { tabs: string[], user: User }) {
     const { tabs, user } = props;
     const { textDarkMode, toggleDarkMode} = useStyleMode();
     return (
-        <header className="border-slate-200 border-b p-3 flex justify-between bg-white dark:bg-slate-600">
+        <nav className="border-slate-200 border-b p-3 flex justify-between bg-white dark:bg-slate-600">
             <div className="flex flex-col md:flex-row shrink md:space-x-2 truncate">
                 <div className="inline-flex"><Avatar src={user.src} alt={generateAlt(user.name, "avatar")} className="max-h-6 max-w-6 mr-1"/>{user.name}</div>
                 <Separator className="hidden md:block" orientation="vertical" />
@@ -66,7 +66,7 @@ export default function Header(props: { tabs: string[], user: User }) {
                 />
                 <div className="w-24">{textDarkMode}</div>
             </ul>
-        </header>
+        </nav>
     )
 }
 

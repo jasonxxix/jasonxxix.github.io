@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
 
 export interface User {
   name: string;
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <Header tabs={tabs} user={user} />
+      <Navbar tabs={tabs} user={user} />
       <div className="App bg-amber-50 dark:bg-cyan-900"></div>
     </>
   );
