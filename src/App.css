@@ -3,3 +3,19 @@
 .App {
   min-height: 100vh;
 }
+
+
+.navDialog {
+  width: 95vw;
+  text-align: center;
+  margin-top: 9px;
+  transition: all .5s ease-in-out;
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+.navDialog.opened {  
+  transform: scaleY(1);
+  opacity: .90;
+}

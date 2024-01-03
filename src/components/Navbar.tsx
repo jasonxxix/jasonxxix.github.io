@@ -17,7 +17,8 @@ const burgerShow = () => {
     const burgerClose = document.getElementById("burger-close");
     burgerClose?.classList.replace("hidden", "block");
     const mobileMenu = document.getElementById("mobile-menu");
-    mobileMenu?.classList.replace("hidden", "block");
+    mobileMenu?.classList.replace("invisible", "visible");
+    mobileMenu?.classList.add("opened");
 }
 
 const burgerHide = () => {
@@ -26,7 +27,8 @@ const burgerHide = () => {
     const burgerClose = document.getElementById("burger-close");
     burgerClose?.classList.replace("block", "hidden");
     const mobileMenu = document.getElementById("mobile-menu");
-    mobileMenu?.classList.replace("block", "hidden");
+    mobileMenu?.classList.replace("visible", "invisible");
+    mobileMenu?.classList.remove("opened");
 }
 
 export default function Navbar(props: { tabs: string[], user: User }) {
@@ -53,12 +55,13 @@ export default function Navbar(props: { tabs: string[], user: User }) {
                         onCheckedChange={toggleDarkMode}
                     />
                 </div>
-                <div className="hidden md:hidden" id="mobile-menu">
-                    <div className="space-y-1 px-2 pb-3 pt-2">
-                        {tabs.map(generateItem)}
-                    </div>
-                </div>
+
             </ul>
+            <div className="navDialog invisible md:hidden absolute top-16 max-w-prose bg-inherit" id="mobile-menu">
+                <ul className="space-y-1 px-2 pb-3 pt-2">
+                    {tabs.map(generateItem)}
+                </ul>
+            </div>
           
             <ul className="hidden md:flex h-5 items-center space-x-4 justify-end">
                 {tabs.map(generateItem)}
