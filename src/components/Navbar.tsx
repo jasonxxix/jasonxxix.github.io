@@ -4,6 +4,7 @@ import { Switch } from "./ui/switch";
 import { User } from "../App";
 import { generateAlt } from "../utils/images";
 import useStyleMode from "../hooks/useStyleMode";
+import Image from "./Image";
 
 function generateItem (text: string, index: number) {
     return (<div key={index}>
@@ -37,7 +38,7 @@ export default function Navbar(props: { tabs: string[], user: User }) {
     return (
         <nav className="border-slate-200 border-b p-3 flex justify-between bg-white dark:bg-slate-600">
             <div className="flex flex-col md:flex-row shrink md:space-x-2 truncate">
-                <div className="inline-flex"><Avatar src={user.src} alt={generateAlt(user.name, "avatar")} className="max-h-6 max-w-6 mr-1"/>{user.name}</div>
+                <div className="inline-flex"><Image src={user.src} alt={generateAlt(user.name, "avatar")} className="avatar h-6 w-6 mr-1"/>{user.name}</div>
                 <Separator className="hidden md:block" orientation="vertical" />
                 <div>{user.position}</div>
             </div>
@@ -74,9 +75,3 @@ export default function Navbar(props: { tabs: string[], user: User }) {
         </nav>
     )
 }
-
-const Avatar = styled.img`
-    border-radius: 1rem;
-    border-width: 2px;
-    border-color: rgb(100 116 139);
-`

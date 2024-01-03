@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
+import Landing from './components/Landing';
 
 export interface User {
   name: string;
@@ -15,7 +16,7 @@ function App() {
   const user: User = {
     name: "Jason Raymond Reyes",
     position: "Full Stack Developer",
-    src: "./images/person.jpg",
+    src: "./images/avatar.jpg",
   }
   
 
@@ -23,6 +24,7 @@ function App() {
     <>
       <Navbar tabs={tabs} user={user} />
       <div className="App bg-amber-50 dark:bg-cyan-900">
+        <Landing />
         <AboutMe />
         <Skills />
       </div>
