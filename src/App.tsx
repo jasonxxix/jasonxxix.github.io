@@ -11,8 +11,17 @@ export interface User {
   src: string;
 } 
 
+export interface Tab {
+  text: string;
+  sectionId: string;
+  Component: JSX.Element;
+}
+
 function App() {
-  const tabs: string[] = ["About Me", "Skills", "Projects"];
+  const tabs: Tab[] = [
+    { text: "About Me", sectionId: "about-me", Component: <AboutMe />}, 
+    { text: "Skills", sectionId: "skills", Component: <Skills />}, 
+    { text: "Projects", sectionId: "projects", Component: <div></div>}];
   const user: User = {
     name: "Jason Raymond Reyes",
     position: "Full Stack Developer",
@@ -25,8 +34,7 @@ function App() {
       <Navbar tabs={tabs} user={user} />
       <div className="App bg-amber-50 dark:bg-cyan-900">
         <Landing />
-        <AboutMe />
-        <Skills />
+        {tabs.map(({ sectionId, Component})=><section key={sectionId} id={sectionId}>{Component}</section>)}
       </div>
     </>
   );

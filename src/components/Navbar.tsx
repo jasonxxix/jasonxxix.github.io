@@ -1,14 +1,14 @@
 import styled from "styled-components"
 import { Separator } from "./ui/separator"
 import { Switch } from "./ui/switch";
-import { User } from "../App";
+import { User, Tab } from "../App";
 import { generateAlt } from "../utils/images";
 import useStyleMode from "../hooks/useStyleMode";
 import Image from "./Image";
 
-function generateItem (text: string, index: number) {
+function generateItem (tab: Tab, index: number) {
     return (<div key={index}>
-        <li>{text}</li>
+        <li><a href={`#${tab.sectionId}`} >{tab.text}</a></li>
     </div>)
 }
 
@@ -32,7 +32,7 @@ const burgerHide = () => {
     mobileMenu?.classList.remove("opened");
 }
 
-export default function Navbar(props: { tabs: string[], user: User }) {
+export default function Navbar(props: { tabs: Tab[], user: User }) {
     const { tabs, user } = props;
     const { textDarkMode, toggleDarkMode} = useStyleMode();
     return (
