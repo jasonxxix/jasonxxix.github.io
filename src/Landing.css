@@ -1,37 +1,17 @@
 
-.first-img{
-    animation: first-move 10s forwards, 60s tired 10s forwards;
-    top: 0;
-    left: calc(50% - 75px);
-}
-  
 .second-img{
     top:0;
     right: 0;
-    animation: middle-move 10s infinite;
+    animation: second-move 10s infinite;
 }
   
 .third-img{
     bottom: 0;
     animation: third-move 10s infinite;
 }
+
   
-@keyframes first-move {
-    0%   {left: calc(50% - 75px); top:0px;}
-    25%  {left: calc(100% - 150px); top:0px;}
-    50%  {left: calc(100% - 150px); top: calc(100% - 200px);}
-    75%  {left:0; top: calc(100% - 200px);}
-    100% {left: calc(50% - 75px); top: calc(50% - 100px);}
-}
-  
-@keyframes tired {
-    25% { transform: scaleX(0.5) scaleY(0.5); }
-    50% { transform: scaleX(0.3) scaleY(0.3); }
-    100% { transform: scaleX(0) scaleY(0); }
-}
-  
-  
-@keyframes middle-move {
+@keyframes second-move {
     0%  {left: calc(100% - 150px); top:0px;}
     25%  {left: calc(100% - 150px); top: calc(100% - 200px);}
     50%  {left:0; top: calc(100% - 200px);}
