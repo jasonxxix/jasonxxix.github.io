@@ -5,6 +5,7 @@ import { User, Tab } from "../App";
 import { generateAlt } from "../utils/images";
 import useStyleMode from "../hooks/useStyleMode";
 import Image from "./Image";
+import "../Nav.css"
 
 function generateItem (tab: Tab, index: number) {
     return (<div key={index}>
@@ -38,8 +39,10 @@ export default function Navbar(props: { tabs: Tab[], user: User }) {
     return (
         <nav className="border-slate-200 border-b p-3 flex justify-between bg-white dark:bg-slate-600">
             <div className="flex flex-col md:flex-row shrink md:space-x-2 truncate">
-                <div className="inline-flex"><Image src={user.src} alt={generateAlt(user.name, "avatar")} className="avatar h-6 w-6 mr-1"/>{user.name}</div>
-                <Separator className="hidden md:block" orientation="vertical" />
+                <div className="inline-flex">
+                    <Image src={user.src} alt={generateAlt(user.name, "avatar")}
+                        className="rounded border-2 h-6 w-6 mr-1 border-purple-900 dark:border-amber-400"/>{user.name}</div>
+                    <Separator className="hidden md:block" orientation="vertical" />
                 <div>{user.position}</div>
             </div>
             <ul className="flex flex-col md:hidden">

@@ -1,4 +1,5 @@
 import Image from "./Image"
+import '../Landing.css'
 
 export default function Landing() {
     return (<div className="py-4 px-6 max-w-prose m-auto h-[400px] relative">
