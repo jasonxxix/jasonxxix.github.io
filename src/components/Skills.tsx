@@ -14,8 +14,8 @@ export default function Skills() {
                 <CardItem title='Mobile Development' skillList={['Android Java','NDK','Gradle','Espresso']}/>
                 <CardItem title='AWS Services' skillList={['Lambda', 'API Gateway', 'S3 Bucket', 'Cloud Search', ]} />
                 <CardItem title='Version Control' skillList={['GitHub', 'Jira', 'Code Review', 'Documentation']}/>
-                <CardItem title='Database' skillList={['MongoDb', 'MySQL', 'Redshift', 'MicrosofstSQL', 'PostgresSQL']} />
-                <CardItem title='Programming Language' skillList={['HTML','CSS','Python','Java','C++', 'R']}/>
+                <CardItem title='Database' skillList={['MongoDb', 'MySQL', 'Redshift', 'MicrosoftSQL', 'PostgresSQL']} />
+                <CardItem title='Programming Language' skillList={['HTML','CSS', 'Javascript','Python','Java','C++', 'R']}/>
             </div>
         </div>
     </div>

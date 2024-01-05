@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
 import Landing from './components/Landing';
+import Projects from './components/Projects';
 
 export interface User {
   name: string;
@@ -21,7 +22,7 @@ function App() {
   const tabs: Tab[] = [
     { text: "About Me", sectionId: "about-me", Component: <AboutMe />}, 
     { text: "Skills", sectionId: "skills", Component: <Skills />}, 
-    { text: "Projects", sectionId: "projects", Component: <div></div>}];
+    { text: "Projects", sectionId: "projects", Component: <Projects />}];
   const user: User = {
     name: "Jason Raymond Reyes",
     position: "Full Stack Developer",
