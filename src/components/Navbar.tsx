@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Separator } from "./ui/separator"
 import { Switch } from "./ui/switch";
-import { User, Tab } from "../App";
+import { User, Tab } from "../App.type";
 import { generateAlt } from "../utils/images";
 import useStyleMode from "../hooks/useStyleMode";
 import Image from "./Image";

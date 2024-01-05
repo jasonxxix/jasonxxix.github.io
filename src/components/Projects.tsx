@@ -1,31 +1,7 @@
 import Logo from "./Logo"
+import { LogoData, project } from "./Projects.type"
 
-interface Logo {
-    Android: string;
-    AWS: string;
-    Cpp: string;
-    Gatsby: string;
-    Github: string;
-    Java: string;
-    Mongo: string;
-    MsSql: string;
-    MySql: string;
-    NextJs: string;
-    NodeJs: string;
-    Python: string;
-    R: string;
-    ReactJs: string;
-    VueJs: string;
-}
-
-type TechStack = keyof Logo;
-
-interface project {
-    name: string,
-    techStack: TechStack[],
-}
-
-const logoMap : Logo = {
+const logoMap : LogoData = {
     Android: "./images/logo-android.svg",
     AWS: "./images/logo-aws.svg",
     Cpp: "./images/logo-cpp.svg",

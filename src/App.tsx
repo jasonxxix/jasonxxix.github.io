@@ -5,18 +5,7 @@ import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
 import Landing from './components/Landing';
 import Projects from './components/Projects';
-
-export interface User {
-  name: string;
-  position: string;
-  src: string;
-} 
-
-export interface Tab {
-  text: string;
-  sectionId: string;
-  Component: JSX.Element;
-}
+import { Tab, User } from './App.type';
 
 function App() {
   const tabs: Tab[] = [
