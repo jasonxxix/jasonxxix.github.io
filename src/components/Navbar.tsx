@@ -35,7 +35,7 @@ const burgerHide = () => {
 
 export default function Navbar(props: { tabs: Tab[], user: User }) {
     const { tabs, user } = props;
-    const { textDarkMode, toggleDarkMode} = useStyleMode();
+    const { isDarkMode, textDarkMode, toggleDarkMode} = useStyleMode();
     return (
         <nav className="border-slate-200 border-b p-3 flex justify-between bg-white dark:bg-slate-600">
             <div className="flex flex-col md:flex-row shrink md:space-x-2 truncate">
@@ -57,6 +57,7 @@ export default function Navbar(props: { tabs: Tab[], user: User }) {
                     </svg>
                     <Switch 
                         onCheckedChange={toggleDarkMode}
+                        checked={isDarkMode}
                     />
                 </div>
 
@@ -72,6 +73,7 @@ export default function Navbar(props: { tabs: Tab[], user: User }) {
                 <Separator orientation="vertical" />
                 <Switch 
                     onCheckedChange={toggleDarkMode}
+                    checked={isDarkMode}
                 />
                 <div className="w-24">{textDarkMode}</div>
             </ul>

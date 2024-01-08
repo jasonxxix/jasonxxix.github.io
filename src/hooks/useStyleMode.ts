@@ -17,6 +17,7 @@ export default function useStyleMode() {
     const textDarkMode = isDarkMode ? StyleModes[0]:StyleModes[1]
 
     return {
+        isDarkMode,
         textDarkMode,
         toggleDarkMode,
     } as const;
