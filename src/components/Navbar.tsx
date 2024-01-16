@@ -1,4 +1,3 @@
-import styled from "styled-components"
 import { Separator } from "./ui/separator"
 import { Switch } from "./ui/switch";
 import { User, Tab } from "../App.type";

@@ -11,9 +11,13 @@ export default function Landing() {
     </LandingDiv>)
 }
 
+export function EmptyLanding () {
+    return <div className="h-[400px]"></div>
+}
+
 const LandingDiv = styled.div`
     background-image: url("./images/landing_bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 `
